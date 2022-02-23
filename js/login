@@ -1,0 +1,41 @@
+var a = document.getElementById('message');
+var p = document.getElementById('pass');
+var p1 = document.getElementById('pass1');
+var s = document.getElementById('send');
+
+
+var checkbox = document.getElementById('ch');
+checkbox.addEventListener("change", validaCheckbox, false);
+  
+function validaCheckbox(){
+  var checked = checkbox.checked;
+  if(checked){
+	p.type = 'text'
+  }else{
+	  p.type = 'password'
+  }
+}
+
+var checkbox1 = document.getElementById('ch1');
+checkbox1.addEventListener("change", validaCheckbox1, false);
+  
+function validaCheckbox1(){
+  var checked1 = checkbox1.checked;
+  if(checked1){
+	  p1.type = 'text'
+  }else{
+	  p1.type = 'password'
+  }
+}
+
+const login = document.getElementById('login');
+const register = document.getElementById('register');
+function change(){
+  if(register.classList.contains('hide')){
+    register.classList.toggle('hide')
+    login.classList.add('hide')
+  }else{
+    register.classList.add('hide')
+    login.classList.toggle('hide')
+  }
+}
